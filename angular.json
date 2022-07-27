@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": ["chart.js"],
             "outputPath": "dist/graficas-app-julio2022",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -101,5 +102,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "f36cb7a0-5928-4f9a-b0ed-3442771bb6b1"
   }
 }
