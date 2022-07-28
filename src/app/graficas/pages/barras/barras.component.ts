@@ -1,4 +1,4 @@
-import { Component  } from '@angular/core';
+import { Component } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
 
@@ -8,22 +8,39 @@ import { Label, Color } from 'ng2-charts';
   templateUrl: './barras.component.html',
   styleUrls: ['./barras.component.css']
 })
-export class BarrasComponent{
+export class BarrasComponent {
 
   barChartOptions: ChartOptions = {
     responsive: true,
+
+    scales: {
+      yAxes: [
+        {
+
+         position:'right'
+        }
+      ],
+      xAxes: [
+        {
+
+         position:'top'
+        }
+      ]
+
+    }
+
   };
-  barChartLabels: Label[] = ['2020', '2021', '2022', '2023', '2024', '2025','2026'];
+  barChartLabels: Label[] = ['2020', '2021', '2022', '2023', '2024', '2025', '2026'];
   barChartType: ChartType = 'bar';
   barChartLegend = true;
   barChartPlugins = [];
   barChartData: ChartDataSets[] = [
-    { data: [45, 37, 60, 70, 46, 33,80], label: 'Series A',backgroundColor:'blue' },
-    { data: [28, 48, 40, 19, 86, 27,25], label: 'Series B',backgroundColor:'orange'  },
-    { data: [28, 48, 40, 19, 86, 27,59], label: 'Series C',backgroundColor:'green'  }
+    { data: [-45, -37, -60, -70, -46, -33, -80], label: 'Series A', backgroundColor: '#C3F51D', hoverBackgroundColor: 'yellow' },
+    { data: [-28, -48, -40, -19, -86, -27, -25], label: 'Series B', backgroundColor: 'orange', hoverBackgroundColor: '#3758EA' },
+    { data: [-28, -37, -45, -15, -75, -42, -59], label: 'Series C', backgroundColor: 'green', hoverBackgroundColor: '#E91CEB' }
   ];
 
-  public randomize():void{
+  public randomize(): void {
     // modifica la data 0 de array
     this.barChartData[0].data = [
       //Primer elemento
@@ -39,6 +56,6 @@ export class BarrasComponent{
       //Sexto elemento
       Math.round(Math.random() * 100),
       //Septimo elemento
-      40 ];
+      40];
   }
 }
