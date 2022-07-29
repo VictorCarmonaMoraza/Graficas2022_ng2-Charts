@@ -1,1 +1,25 @@
-<p>dona works!</p>
+<div class="row">
+  <div class="col">
+    <div class="chart-wrapper">
+              <!--A esta grafica le hemos pasado colores propios-->
+              <!-- <canvas baseChart
+              [data]="doughnutChartData"
+              [labels]="doughnutChartLabels"
+              [chartType]="doughnutChartType"
+              [colors]="colors"
+
+              >
+              </canvas> -->
+      <canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [type]="'doughnut'"
+        >
+      </canvas>
+
+    </div>
+      <button (click)="randomize()" class="btn btn-primary float-end">
+        Update
+      </button>
+  </div>
+</div>

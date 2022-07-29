@@ -3,9 +3,13 @@
 <div class="row">
   <!--Coje seis columnas del contenedor-->
   <div class="col-md-6">
-    <app-grafica-barra [horizontal]="true"
-            [barChartData]="productoData"
-            [barChartLabels]="proveedoresLabels"
+    <!-- <app-grafica-barra
+          [horizontal]="true"
+         [barChartData]="productoData"
+    ></app-grafica-barra> -->
+    <app-grafica-barra
+        [horizontal]="true"
+         [barChartData]="productoData"
     ></app-grafica-barra>
   </div>
 
@@ -13,7 +17,7 @@
   <div class="col-md-6">
     <app-grafica-barra
             [barChartData]="proveedoresData"
-            [barChartLabels]="proveedoresLabels"
+
     ></app-grafica-barra>
   </div>
 </div>
