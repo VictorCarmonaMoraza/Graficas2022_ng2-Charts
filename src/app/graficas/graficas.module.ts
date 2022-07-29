@@ -21,10 +21,6 @@ import { DonaComponent } from './pages/dona/dona.component';
 import { NgChartsModule } from 'ng2-charts';
 //import { ChartsModule } from 'ng2-charts';
 
-
-
-
-
 @NgModule({
   declarations: [
     BarrasComponent,

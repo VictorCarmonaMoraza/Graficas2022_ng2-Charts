@@ -128,7 +128,6 @@ export class BarrasComponent {
       56,
       Math.round(Math.random() * 100),
       40 ];
-
     this.chart?.update();
   }
 }

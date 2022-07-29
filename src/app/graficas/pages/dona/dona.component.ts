@@ -41,10 +41,10 @@ import { BaseChartDirective, baseColors } from 'ng2-charts';
 @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 public barChartOptions: ChartConfiguration<'doughnut'>['options'] = {
   cutout: '50%',
-  rotation:-Math.PI,
-  circumference: 360,
+  rotation:270,
+  circumference: 180,
   animation:false,
-  responsive: true,
+  responsive: false,
 
   // We use these empty structures as placeholders for dynamic theming.
 };
@@ -58,7 +58,7 @@ public barChartData: ChartData<'doughnut'> = {
   datasets: [
     // { data: [ 65, 59, 80, 81 ], label: 'Series A',backgroundColor:'red' },
     { data: [ 65, 59, 80, 81], label: 'Series A',backgroundColor:["#FF6384","#63FF84","#84FF63","#8463FF"],borderColor: "black" },
-    { data: [ 28, 48, 40, 19], label: 'Series B',backgroundColor:["#FF6384","#63FF84","#84FF63","#8463FF"],borderColor: "black"  }
+    { data: [ 28, 48, 40, 19], label: 'Series B',backgroundColor:["#A6E665","#F0C169","#D96A73","#00E6CB"],borderColor: "black"  }
   ],
 };
 
