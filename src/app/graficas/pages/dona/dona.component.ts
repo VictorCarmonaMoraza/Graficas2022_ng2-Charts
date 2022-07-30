@@ -43,7 +43,7 @@ public barChartOptions: ChartConfiguration<'doughnut'>['options'] = {
   cutout: '50%',
   rotation:270,
   circumference: 180,
-  animation:false,
+  //animation:false,
   responsive: false,
 
   // We use these empty structures as placeholders for dynamic theming.
